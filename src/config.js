@@ -1,5 +1,7 @@
 export default {
     MAX_ATTACHMENT_SIZE: 5000000,
+    STRIPE_KEY: "pk_test_lrPEnrVc0l4iPjFGe2e1Xw2s004mU7Dkp8",
+
     s3: {
       REGION: "eu-west-1",
       BUCKET: "ivarsoyfoto-notes-app-uploads"
