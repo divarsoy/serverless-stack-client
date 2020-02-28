@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./App.css";
 import Routes from "./Routes";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
@@ -31,6 +31,7 @@ function App(props) {
   async function handleLogout() {
     await Auth.signOut();
     userHasAuthenticated(false);
+    props.history.push("/login");
   }
 
   return (
@@ -64,4 +65,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default withRouter(App);
